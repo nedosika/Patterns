@@ -1,12 +1,11 @@
 class Singletone {
   constructor(){
-    if(Singletone.instance)
+    if(!Singletone.instance)
     {
-      return Singletone.instance;
+      Singletone.instance = this;
     }
     
-    Singletone.instance = this;
-    return this;
+    return Singletone.instance;
   }
 }
 
